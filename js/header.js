@@ -1,13 +1,14 @@
 function loadeHeader() {
   const currentUser = localStorage.getItem('currentUser');
+  const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
-    : `<a href="../" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
-       <a href="../" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
+    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
+       <a href="${base}/" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
 
   const headerHTML = `
        <nav>
-<a href="../" class="nav-left">
+<a href="${base}/" class="nav-left">
     <div class="logo">
         <span class="client-name"></span>
     </div>
@@ -15,9 +16,9 @@ function loadeHeader() {
 
         <div class="nav-right">
             <div class="nav-links">
-                <a href="../" class="active"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="../product"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="../eula"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/" class="active"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
+                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -36,14 +37,15 @@ function loadeHeader() {
 
 function loadeHeaderProduct() {
   const currentUser = localStorage.getItem('currentUser');
+  const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="../cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
-    : `<a href="../" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
-       <a href="../" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
+    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
+       <a href="${base}/" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
 
   const headerHTML = `
        <nav>
-<a href="../" class="nav-left">
+<a href="${base}/" class="nav-left">
     <div class="logo">
         <span class="client-name"></span>
     </div>
@@ -51,9 +53,9 @@ function loadeHeaderProduct() {
 
         <div class="nav-right">
             <div class="nav-links">
-                <a href="../"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="../product" class="active"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="../eula"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
+                <a href="${base}/product/product.html" class="active"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -70,9 +72,10 @@ function loadeHeaderProduct() {
 }
 
 function loadeHeaderCabinet() {
+  const base = CONFIG.basePath || '';
   const headerHTML = `
        <nav>
-<a href="../" class="nav-left">
+<a href="${base}/" class="nav-left">
     <div class="logo">
         <span class="client-name"></span>
     </div>
@@ -80,9 +83,9 @@ function loadeHeaderCabinet() {
 
         <div class="nav-right">
             <div class="nav-links">
-                <a href="../"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="../product"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="../eula"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
+                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -99,21 +102,23 @@ function loadeHeaderCabinet() {
 }
 
 function handleLogout() {
+    const base = CONFIG.basePath || '';
     localStorage.removeItem('currentUser');
     document.cookie = 'auth_user=; path=/; max-age=0';
     localStorage.removeItem('user');
-    window.location.href = '../';
+    window.location.href = base + '/';
 }
 
 function loadeHeaderTerm() {
   const currentUser = localStorage.getItem('currentUser');
+  const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="../cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
-    : `<a href="../" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>`;
+    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>`;
 
   const headerHTML = `
        <nav>
-<a href="../" class="nav-left">
+<a href="${base}/" class="nav-left">
     <div class="logo">
         <span class="client-name"></span>
     </div>
@@ -121,9 +126,9 @@ function loadeHeaderTerm() {
 
         <div class="nav-right">
             <div class="nav-links">
-                <a href="../"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="../product"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="../eula" class="active"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
+                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/eula.html" class="active"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>

@@ -1163,7 +1163,8 @@
     const currentUser = localStorage.getItem('currentUser');
     if (!currentUser) {
         alert('Please login first');
-        window.location.replace('../index.html');
+        const base = (typeof CONFIG !== 'undefined' && CONFIG.basePath) ? CONFIG.basePath : '';
+        window.location.replace(base + '/');
     }
 
     const API_URL = CONFIG.clientLinkUrl;
