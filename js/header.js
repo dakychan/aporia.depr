@@ -2,7 +2,7 @@ function loadeHeader() {
   const currentUser = localStorage.getItem('currentUser');
   const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    ? `<a href="${base}/cabinet/" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
     : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
        <a href="${base}/" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
 
@@ -17,8 +17,8 @@ function loadeHeader() {
         <div class="nav-right">
             <div class="nav-links">
                 <a href="${base}/" class="active"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/product/"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -39,7 +39,7 @@ function loadeHeaderProduct() {
   const currentUser = localStorage.getItem('currentUser');
   const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    ? `<a href="${base}/cabinet/" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
     : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>
        <a href="${base}/" class="btn btn-primary" onclick="openModal('signup'); return false;"><i class="fa-regular fa-user"></i> <span data-lang="btn_signup">Sign Up</span></a>`;
 
@@ -54,8 +54,8 @@ function loadeHeaderProduct() {
         <div class="nav-right">
             <div class="nav-links">
                 <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="${base}/product/product.html" class="active"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/product/" class="active"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -84,8 +84,8 @@ function loadeHeaderCabinet() {
         <div class="nav-right">
             <div class="nav-links">
                 <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="${base}/eula/eula.html"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/product/"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
@@ -113,7 +113,7 @@ function loadeHeaderTerm() {
   const currentUser = localStorage.getItem('currentUser');
   const base = CONFIG.basePath || '';
   const authButtons = currentUser 
-    ? `<a href="${base}/cabinet/cabinet.html" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
+    ? `<a href="${base}/cabinet/" class="btn btn-ghost"> <span data-lang="btn_cabinet">Cabinet</span></a>`
     : `<a href="${base}/" class="btn btn-ghost" onclick="openModal('signin'); return false;"><i class="fa-solid fa-right-to-bracket"></i> <span data-lang="btn_signin">Sign In</span></a>`;
 
   const headerHTML = `
@@ -127,8 +127,8 @@ function loadeHeaderTerm() {
         <div class="nav-right">
             <div class="nav-links">
                 <a href="${base}/"><i class="fa-solid fa-house"></i> <span data-lang="nav_home">Home</span></a>
-                <a href="${base}/product/product.html"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
-                <a href="${base}/eula/eula.html" class="active"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
+                <a href="${base}/product/"><i class="fa-solid fa-box"></i> <span data-lang="nav_products">Products</span></a>
+                <a href="${base}/eula/" class="active"><i class="fa-solid fa-scale-balanced"></i> <span data-lang="nav_terms">Eula</span></a>
             </div>
             <div class="lang-switcher">
                 <button class="lang-btn active" onclick="setLanguage('en')">EN</button>

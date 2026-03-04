@@ -325,7 +325,7 @@
             setTimeout(() => {
                 closeModal('signin');
                 const base = CONFIG.basePath || '';
-                window.location.href = base + '/cabinet/cabinet.html';
+                window.location.href = base + '/cabinet/';
             }, 1000);
         } else {
             showMessage('signinMessage', translations[currentLang].login_error, true);
@@ -391,7 +391,7 @@
         setTimeout(() => {
             closeModal('signup');
             const base = CONFIG.basePath || '';
-            window.location.href = base + '/cabinet/cabinet.html';
+            window.location.href = base + '/cabinet/';
         }, 1000);
 
         setButtonLoading('signupButton', false);
